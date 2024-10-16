@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Top Trends</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="scripts.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>Top Trends der letzten 24 Stunden</h1>
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Trends durchsuchen..."
+        />
+        <div class="theme-switcher">
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle" />
+            <span class="slider round"></span>
+          </label>
+          <span>Dark Mode</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="filter-options">
+      <div class="container">
+        <button class="filter-btn active" data-platform="all">
+          <i class="bx bx-world"></i>
+          <span class="btn-text">Alle Plattformen</span>
+        </button>
+        <button class="filter-btn" data-platform="google">
+          <i class="bx bxl-google"></i>
+          <span class="btn-text">Google</span>
+        </button>
+        <button class="filter-btn" data-platform="tiktok">
+          <i class="bx bxl-tiktok"></i>
+          <span class="btn-text">TikTok</span>
+        </button>
+        <button class="filter-btn" data-platform="youtube">
+          <i class="bx bxl-youtube"></i>
+          <span class="btn-text">YouTube</span>
+        </button>
+        <button class="filter-btn" data-platform="instagram">
+          <i class="bx bxl-instagram"></i>
+          <span class="btn-text">Instagram</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="trends-container" id="trends-section">
+      <div class="container">
+        <!-- Google Trends -->
+        <div class="trend-section" data-platform="google" id="google-trends">
+          <h2>Google Trends</h2>
+          <ul id="google-list"></ul>
+          <canvas id="googleChart" class="trend-chart"></canvas>
+        </div>
+
+        <!-- TikTok Trends -->
+        <div class="trend-section" data-platform="tiktok" id="tiktok-trends">
+          <h2>TikTok Trends</h2>
+          <ul id="tiktok-list"></ul>
+          <canvas id="tiktokChart" class="trend-chart"></canvas>
+        </div>
+
+        <!-- YouTube Trends -->
+        <div class="trend-section" data-platform="youtube" id="youtube-trends">
+          <h2>YouTube Trends</h2>
+          <ul id="youtube-list"></ul>
+          <canvas id="youtubeChart" class="trend-chart"></canvas>
+        </div>
+
+        <!-- Instagram Trends -->
+        <div
+          class="trend-section"
+          data-platform="instagram"
+          id="instagram-trends"
+        >
+          <h2>Instagram Trends</h2>
+          <ul id="instagram-list"></ul>
+          <canvas id="instagramChart" class="trend-chart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Codehxb - Designed by Ata</p>
+      </div>
+    </footer>
+  </body>
+</html>

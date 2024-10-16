@@ -1,0 +1,199 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f5f7;
+  color: #333;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#search-bar {
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Filter Buttons */
+.filter-options {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background-color: #e5e5e7;
+  transition: background-color 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: #0071e3;
+  color: white;
+}
+
+/* Trends Section */
+.trends-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.trend-section {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 48%;
+  transition: transform 0.3s ease;
+}
+
+.trend-section:hover {
+  transform: translateY(-10px);
+}
+
+.trend-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #0071e3;
+  border-bottom: 2px solid #e5e5e7;
+  padding-bottom: 10px;
+}
+
+.trend-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trend-section ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Chart Styles */
+.trend-chart {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f5f5f7;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+  color: #6e6e73;
+  font-size: 1rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+
+body.dark-mode .trend-section {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode .header {
+  background-color: #333;
+}
+
+body.dark-mode .filter-btn {
+  background-color: #555;
+  color: white;
+}
